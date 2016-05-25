@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GdN-pC-CJU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="kLi-je-WWE">
+            <objects>
+                <viewController id="YGp-0h-ZBB" customClass="ViewController" customModule="SuperHeroAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XyU-ax-kXz"/>
+                        <viewControllerLayoutGuide type="bottom" id="iM1-no-GTG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0MD-x8-mFL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="knp-kL-JgK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="szesciopak" translatesAutoresizingMaskIntoConstraints="NO" id="Xhj-IT-qQC">
+                                <rect key="frame" x="238" y="88" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xhj-IT-qQC" secondAttribute="height" multiplier="1:1" id="PZg-7o-FQj"/>
+                                    <constraint firstAttribute="width" constant="124" id="wOZ-sg-1yU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idea" translatesAutoresizingMaskIntoConstraints="NO" id="wFd-Eu-d5p">
+                                <rect key="frame" x="452" y="238" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="DqK-N9-HCq"/>
+                                    <constraint firstAttribute="width" secondItem="wFd-Eu-d5p" secondAttribute="height" multiplier="1:1" id="ax5-Tu-ynp"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ax5-Tu-ynp"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="atmo_student" translatesAutoresizingMaskIntoConstraints="NO" id="WJx-Wl-ZO5">
+                                <rect key="frame" x="238" y="452" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="aWS-T3-AJJ"/>
+                                    <constraint firstAttribute="width" secondItem="WJx-Wl-ZO5" secondAttribute="height" multiplier="1:1" id="djq-yW-uae"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="djq-yW-uae"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="world" translatesAutoresizingMaskIntoConstraints="NO" id="IMq-RF-4sP">
+                                <rect key="frame" x="24" y="238" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IMq-RF-4sP" secondAttribute="height" multiplier="1:1" id="0P5-rV-0Hq"/>
+                                    <constraint firstAttribute="width" constant="124" id="L6q-jf-1mn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0P5-rV-0Hq"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xhj-IT-qQC" firstAttribute="top" secondItem="XyU-ax-kXz" secondAttribute="bottom" constant="24" id="9Gm-CX-ShR"/>
+                            <constraint firstItem="wFd-Eu-d5p" firstAttribute="centerY" secondItem="0MD-x8-mFL" secondAttribute="centerY" id="A2W-7o-YyU"/>
+                            <constraint firstItem="iM1-no-GTG" firstAttribute="top" secondItem="knp-kL-JgK" secondAttribute="bottom" id="BXu-Vg-mru"/>
+                            <constraint firstItem="IMq-RF-4sP" firstAttribute="centerY" secondItem="0MD-x8-mFL" secondAttribute="centerY" id="IyD-Gc-0Ih"/>
+                            <constraint firstItem="knp-kL-JgK" firstAttribute="leading" secondItem="0MD-x8-mFL" secondAttribute="leading" id="K7R-3x-x4W"/>
+                            <constraint firstAttribute="trailing" secondItem="knp-kL-JgK" secondAttribute="trailing" id="KKU-Qt-F8g"/>
+                            <constraint firstItem="WJx-Wl-ZO5" firstAttribute="centerX" secondItem="0MD-x8-mFL" secondAttribute="centerX" id="Tw1-C2-t9p"/>
+                            <constraint firstItem="IMq-RF-4sP" firstAttribute="leading" secondItem="0MD-x8-mFL" secondAttribute="leading" constant="24" id="W7h-od-bJT"/>
+                            <constraint firstItem="IMq-RF-4sP" firstAttribute="width" secondItem="IMq-RF-4sP" secondAttribute="height" multiplier="1:1" id="aJk-2V-gtI"/>
+                            <constraint firstItem="Xhj-IT-qQC" firstAttribute="centerX" secondItem="0MD-x8-mFL" secondAttribute="centerX" id="bgn-MW-xZM"/>
+                            <constraint firstItem="iM1-no-GTG" firstAttribute="top" secondItem="WJx-Wl-ZO5" secondAttribute="bottom" constant="24" id="dMb-Sl-XdY"/>
+                            <constraint firstAttribute="trailing" secondItem="wFd-Eu-d5p" secondAttribute="trailing" constant="24" id="hkw-Wy-QfE"/>
+                            <constraint firstItem="wFd-Eu-d5p" firstAttribute="width" secondItem="wFd-Eu-d5p" secondAttribute="height" multiplier="1:1" id="nuN-jE-BbU"/>
+                            <constraint firstItem="WJx-Wl-ZO5" firstAttribute="width" secondItem="WJx-Wl-ZO5" secondAttribute="height" multiplier="1:1" id="ouL-8R-5bw"/>
+                            <constraint firstItem="knp-kL-JgK" firstAttribute="top" secondItem="XyU-ax-kXz" secondAttribute="bottom" id="urV-q3-bB0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Ai-Gf-xgU"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="knp-kL-JgK" id="xxC-P7-xdk"/>
+                        <outlet property="bottomImage" destination="WJx-Wl-ZO5" id="tuX-av-hxP"/>
+                        <outlet property="leftImage" destination="IMq-RF-4sP" id="H63-xO-1Bd"/>
+                        <outlet property="rightImage" destination="wFd-Eu-d5p" id="KdS-aI-mXL"/>
+                        <outlet property="topImage" destination="Xhj-IT-qQC" id="3a7-BB-DIu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ph0-oe-hLB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2171" y="479"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dWR-rb-LFk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GdN-pC-CJU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t3T-ye-nPQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YGp-0h-ZBB" kind="relationship" relationship="rootViewController" id="Jqe-6t-K2K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pn0-gI-que" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359" y="479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="atmo_student" width="500" height="500"/>
+        <image name="batman" width="317" height="500"/>
+        <image name="idea" width="193" height="156"/>
+        <image name="szesciopak" width="211" height="153"/>
+        <image name="world" width="208" height="252"/>
+    </resources>
+</document>

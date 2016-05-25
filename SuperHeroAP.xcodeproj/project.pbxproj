@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2DDCD361CF58923005D73A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DDCD351CF58923005D73A9 /* AppDelegate.swift */; };
+		D2DDCD381CF58923005D73A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DDCD371CF58923005D73A9 /* ViewController.swift */; };
+		D2DDCD3B1CF58923005D73A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DDCD391CF58923005D73A9 /* Main.storyboard */; };
+		D2DDCD3D1CF58923005D73A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2DDCD3C1CF58923005D73A9 /* Assets.xcassets */; };
+		D2DDCD401CF58923005D73A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DDCD3E1CF58923005D73A9 /* LaunchScreen.storyboard */; };
+		D2DDCD641CF5B71C005D73A9 /* BeaconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DDCD631CF5B71C005D73A9 /* BeaconModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D2DDCD501CF589BE005D73A9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D2DDCD321CF58923005D73A9 /* SuperHeroAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2DDCD351CF58923005D73A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2DDCD371CF58923005D73A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2DDCD3A1CF58923005D73A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2DDCD3C1CF58923005D73A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2DDCD3F1CF58923005D73A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2DDCD411CF58923005D73A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2DDCD631CF5B71C005D73A9 /* BeaconModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2DDCD2F1CF58923005D73A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2DDCD291CF58923005D73A9 = {
+			isa = PBXGroup;
+			children = (
+				D2DDCD341CF58923005D73A9 /* SuperHeroAP */,
+				D2DDCD331CF58923005D73A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2DDCD331CF58923005D73A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2DDCD321CF58923005D73A9 /* SuperHeroAP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2DDCD341CF58923005D73A9 /* SuperHeroAP */ = {
+			isa = PBXGroup;
+			children = (
+				D2DDCD351CF58923005D73A9 /* AppDelegate.swift */,
+				D2DDCD371CF58923005D73A9 /* ViewController.swift */,
+				D2DDCD391CF58923005D73A9 /* Main.storyboard */,
+				D2DDCD3C1CF58923005D73A9 /* Assets.xcassets */,
+				D2DDCD3E1CF58923005D73A9 /* LaunchScreen.storyboard */,
+				D2DDCD411CF58923005D73A9 /* Info.plist */,
+				D2DDCD631CF5B71C005D73A9 /* BeaconModel.swift */,
+			);
+			path = SuperHeroAP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2DDCD311CF58923005D73A9 /* SuperHeroAP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2DDCD441CF58923005D73A9 /* Build configuration list for PBXNativeTarget "SuperHeroAP" */;
+			buildPhases = (
+				D2DDCD2E1CF58923005D73A9 /* Sources */,
+				D2DDCD2F1CF58923005D73A9 /* Frameworks */,
+				D2DDCD301CF58923005D73A9 /* Resources */,
+				D2DDCD501CF589BE005D73A9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuperHeroAP;
+			productName = SuperHeroAP;
+			productReference = D2DDCD321CF58923005D73A9 /* SuperHeroAP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2DDCD2A1CF58923005D73A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = SoInteractive;
+				TargetAttributes = {
+					D2DDCD311CF58923005D73A9 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = D2DDCD2D1CF58923005D73A9 /* Build configuration list for PBXProject "SuperHeroAP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2DDCD291CF58923005D73A9;
+			productRefGroup = D2DDCD331CF58923005D73A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2DDCD311CF58923005D73A9 /* SuperHeroAP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2DDCD301CF58923005D73A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DDCD401CF58923005D73A9 /* LaunchScreen.storyboard in Resources */,
+				D2DDCD3D1CF58923005D73A9 /* Assets.xcassets in Resources */,
+				D2DDCD3B1CF58923005D73A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2DDCD2E1CF58923005D73A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DDCD381CF58923005D73A9 /* ViewController.swift in Sources */,
+				D2DDCD641CF5B71C005D73A9 /* BeaconModel.swift in Sources */,
+				D2DDCD361CF58923005D73A9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D2DDCD391CF58923005D73A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2DDCD3A1CF58923005D73A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D2DDCD3E1CF58923005D73A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2DDCD3F1CF58923005D73A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2DDCD421CF58923005D73A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2DDCD431CF58923005D73A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2DDCD451CF58923005D73A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SuperHeroAP",
+				);
+				INFOPLIST_FILE = SuperHeroAP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SuperHeroAP",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = $inherited;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sointeractive.SuperHeroAP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		D2DDCD461CF58923005D73A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SuperHeroAP",
+				);
+				INFOPLIST_FILE = SuperHeroAP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SuperHeroAP",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = $inherited;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sointeractive.SuperHeroAP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2DDCD2D1CF58923005D73A9 /* Build configuration list for PBXProject "SuperHeroAP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2DDCD421CF58923005D73A9 /* Debug */,
+				D2DDCD431CF58923005D73A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2DDCD441CF58923005D73A9 /* Build configuration list for PBXNativeTarget "SuperHeroAP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2DDCD451CF58923005D73A9 /* Debug */,
+				D2DDCD461CF58923005D73A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2DDCD2A1CF58923005D73A9 /* Project object */;
+}
