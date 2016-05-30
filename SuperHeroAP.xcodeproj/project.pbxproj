@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D224A2821CFC0F0A00722A6F /* dzwonek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D224A2811CFC0F0A00722A6F /* dzwonek.mp3 */; };
 		D2DDCD361CF58923005D73A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DDCD351CF58923005D73A9 /* AppDelegate.swift */; };
 		D2DDCD381CF58923005D73A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DDCD371CF58923005D73A9 /* ViewController.swift */; };
 		D2DDCD3B1CF58923005D73A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DDCD391CF58923005D73A9 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D224A2811CFC0F0A00722A6F /* dzwonek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dzwonek.mp3; sourceTree = "<group>"; };
 		D2DDCD321CF58923005D73A9 /* SuperHeroAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DDCD351CF58923005D73A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2DDCD371CF58923005D73A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		D2DDCD341CF58923005D73A9 /* SuperHeroAP */ = {
 			isa = PBXGroup;
 			children = (
+				D224A2811CFC0F0A00722A6F /* dzwonek.mp3 */,
 				D2DDCD351CF58923005D73A9 /* AppDelegate.swift */,
 				D2DDCD371CF58923005D73A9 /* ViewController.swift */,
 				D2DDCD391CF58923005D73A9 /* Main.storyboard */,
@@ -142,6 +145,7 @@
 				D2DDCD401CF58923005D73A9 /* LaunchScreen.storyboard in Resources */,
 				D2DDCD3D1CF58923005D73A9 /* Assets.xcassets in Resources */,
 				D2DDCD3B1CF58923005D73A9 /* Main.storyboard in Resources */,
+				D224A2821CFC0F0A00722A6F /* dzwonek.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +338,7 @@
 				D2DDCD461CF58923005D73A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

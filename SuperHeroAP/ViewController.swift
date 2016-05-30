@@ -9,18 +9,23 @@
 import UIKit
 import QuartzCore
 import CoreLocation
+import AVFoundation
 
 
-
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate{
+    
+    @IBOutlet weak var wiedzaLabel: UILabel!
+    @IBOutlet weak var silaLabel: UILabel!
+    @IBOutlet weak var pomyslyLabel: UILabel!
     
     @IBOutlet weak var backgroundImage: UIImageView!
     
     @IBOutlet weak var topImage: UIImageView!
-    @IBOutlet weak var bottomImage: UIImageView!
+    
     @IBOutlet weak var leftImage: UIImageView!
     @IBOutlet weak var rightImage: UIImageView!
     
+    var player: AVAudioPlayer?
     
     var beaconRegion: CLBeaconRegion!
     
@@ -35,7 +40,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let firstBeacon = BeaconModel()
     let secondBeacon = BeaconModel()
     let thirdBeacon =  BeaconModel()
-    let fourthBeacon = BeaconModel()
+    
     
     var isFirstImageShown = false
     var isSecondImageShown = false
@@ -62,22 +67,34 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         secondBeacon.uuid = "cdac6577-ea6c-4db6-8c08-918ef0c1756a"
         
         
-        thirdBeacon.major = 46339
-        thirdBeacon.minor = 56811
+        thirdBeacon.major = 1000
+        thirdBeacon.minor = 2977
         thirdBeacon.uuid = "4d100990-0f3e-444f-8184-a840bbd1aa8c"
         
-        
-        fourthBeacon.major = 1000
-        fourthBeacon.minor = 2977
-        fourthBeacon.uuid = "4d100990-0f3e-444f-8184-a840bbd1aa8c"
-        
         uuidsArray.append(firstBeacon.uuid!)
-        uuidsArray.append(fourthBeacon.uuid!)
-      
+        uuidsArray.append(thirdBeacon.uuid!)
+        
         setupBeaconWithUIID(uuidsArray)
         prepareImages()
     }
     
+    func stopBeacons(uuid: [String]){
+        
+        for proximityUUID in uuid{
+            
+            
+            let newId =  NSUUID(UUIDString:proximityUUID)
+            
+            beaconRegion = CLBeaconRegion(proximityUUID: newId!, identifier: "com.sointeractive.SuperHeroAP \(proximityUUID)")
+            
+            beaconRegion.notifyOnEntry = true
+            beaconRegion.notifyOnExit = true
+            locationManager.stopMonitoringForRegion(beaconRegion)
+            locationManager.stopRangingBeaconsInRegion(beaconRegion)
+        }
+        
+        
+    }
     
     func setupBeaconWithUIID(uuid : [String]){
         
@@ -90,10 +107,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             beaconRegion.notifyOnEntry = true
             beaconRegion.notifyOnExit = true
-            locationManager.requestAlwaysAuthorization()
             locationManager.startMonitoringForRegion(beaconRegion)
-            locationManager.startUpdatingLocation()
-            
+            locationManager.startRangingBeaconsInRegion(beaconRegion)
         }
         
     }
@@ -101,9 +116,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func prepareImages(){
         
         self.topImage.hidden =  true
-        self.bottomImage.hidden =  true
         self.leftImage.hidden =  true
         self.rightImage.hidden =  true
+        self.backgroundImage.hidden = true
+        self.wiedzaLabel.text = "Szukaj dalej!"
+        self.pomyslyLabel.text = "Szukaj dalej!"
+        self.silaLabel.text = "Szukaj dalej!"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -137,7 +155,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
-        //        var shouldHideBeaconDetails = true
         
         if  !beacons.isEmpty {
             if beacons.count > 0 {
@@ -146,42 +163,72 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         lastFoundBeacon = closestBeacon
                         lastProximity = closestBeacon.proximity
                         
+                        
+                        
                         var proximityMessage: String!
                         switch lastFoundBeacon.proximity {
                         case CLProximity.Immediate:
-                            proximityMessage = "Very close"
+                            
+                            proximityMessage = "Bardzo blisko"
+                            
                             
                             if closestBeacon.minor == firstBeacon.minor{
                                 self.topImage.hidden =  false
                                 isFirstImageShown = true
+                                silaLabel.hidden = true
+                                
                             } else if  closestBeacon.minor == secondBeacon.minor {
                                 
                                 self.rightImage.hidden = false
                                 isSecondImageShown = true
-                            } else if  closestBeacon.minor == thirdBeacon.minor {
+                                pomyslyLabel.hidden = true
                                 
-                                self.bottomImage.hidden = false
-                                isThirdImageShown = true
-                            } else if closestBeacon.minor == fourthBeacon.minor {
-                                
-                                self.leftImage.hidden = false
+                            } else if closestBeacon.minor == thirdBeacon.minor {
                                 isFourthImageShown = true
+                                self.leftImage.hidden = false
+                                
+                                wiedzaLabel.hidden = true
                             }
+                            
+                            setupLabels(closestBeacon, message: proximityMessage)
                             
                             
                         case CLProximity.Near:
-                            proximityMessage = "Near"
                             
+                            proximityMessage = "Blisko"
+                            
+                            setupLabels(closestBeacon, message: proximityMessage)
                         case CLProximity.Far:
-                            proximityMessage = "Far"
                             
+                            proximityMessage = "Daleko"
+                            
+                            setupLabels(closestBeacon, message: proximityMessage)
                         default:
-                            proximityMessage = "Where's the beacon?"
+                            proximityMessage = "Szukaj dalej!"
+                            
+                            setupLabels(closestBeacon, message: proximityMessage)
                         }
                         
-                        //                        shouldHideBeaconDetails = false
+                        if isFirstImageShown && isSecondImageShown && isFourthImageShown {
+                            
+                            
+//                            self.topImage.hidden = true
+//                            self.leftImage.hidden = true
+//                            self.rightImage.hidden = true
+                            
+                            self.backgroundImage.hidden = false
+                            
+                            
+                            stopBeacons(uuidsArray)
+                            isFirstImageShown = false
+                            isSecondImageShown = false
+                            isFourthImageShown = false
+                            
+                            playSound()
+                        }
                         
-                        debugPrint("Beacon Details:\nMajor =  \(String(closestBeacon.major.intValue))  \nMinor = \(String(closestBeacon.minor.intValue))  \nDistance:  \(proximityMessage)  \(closestBeacon.proximityUUID.UUIDString)")
+                        
+                        debugPrint("Beacon Details:\nMajor =  \(String(closestBeacon.major.intValue))  \nMinor = \(String(closestBeacon.minor.intValue))  \nDistance:  \(proximityMessage)")
                     }
                 }
             }
@@ -204,6 +251,55 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         print(error)
     }
     
+    @IBAction func resetState(sender: AnyObject) {
+        
+        setupBeaconWithUIID(uuidsArray)
+        prepareImages()
+        isFirstImageShown = false
+        isSecondImageShown = false
+        isFourthImageShown = false
+        self.wiedzaLabel.text = "Szukaj dalej!"
+        self.pomyslyLabel.text = "Szukaj dalej!"
+        self.silaLabel.text = "Szukaj dalej!"
+        
+        self.wiedzaLabel.hidden = false
+        self.pomyslyLabel.hidden = false
+        self.silaLabel.hidden = false
+        
+        player?.stop()
+        
+    }
+    func playSound() {
+        let url = NSBundle.mainBundle().URLForResource("dzwonek", withExtension: "mp3")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOfURL: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+            debugPrint("played")
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+    
+    func setupLabels(beacon: CLBeacon, message : String){
+        
+        
+        if beacon.minor == firstBeacon.minor{
+            silaLabel.text = message
+            
+        } else if  beacon.minor == secondBeacon.minor {
+            
+            pomyslyLabel.text = message
+            
+        } else if beacon.minor == thirdBeacon.minor {
+            wiedzaLabel.text = message
+        }
+        
+        
+    }
     
 }
 
