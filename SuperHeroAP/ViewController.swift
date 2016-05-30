@@ -210,21 +210,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                         }
                         
                         if isFirstImageShown && isSecondImageShown && isFourthImageShown {
-                            
-                            
-//                            self.topImage.hidden = true
-//                            self.leftImage.hidden = true
-//                            self.rightImage.hidden = true
-                            
-                            self.backgroundImage.hidden = false
-                            
-                            
                             stopBeacons(uuidsArray)
-                            isFirstImageShown = false
-                            isSecondImageShown = false
-                            isFourthImageShown = false
-                            
                             playSound()
+                            
+                            let actionSheetController: UIAlertController = UIAlertController(title: "Hurra!", message: "Jesteś superbohaterem!", preferredStyle: .Alert)
+                            
+                            //Create and add the Cancel action
+                            let cancelAction: UIAlertAction = UIAlertAction(title: "OK", style: .Cancel) { action -> Void in
+                                self.isFirstImageShown = false
+                                self.isSecondImageShown = false
+                                self.isFourthImageShown = false
+                                self.backgroundImage.hidden = false
+                                self.topImage.hidden = true
+                                self.leftImage.hidden = true
+                                self.rightImage.hidden = true
+                                
+                            }
+                            actionSheetController.addAction(cancelAction)
+                            self.presentViewController(actionSheetController, animated: true, completion: nil)
                         }
                         
                         
